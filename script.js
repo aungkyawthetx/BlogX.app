@@ -51,3 +51,47 @@ window.addEventListener('scroll', function () {
         }
     }
 });
+
+
+
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', function () {
+        // Remove active state from all tabs
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('border-purple-600', 'text-purple-600', 'dark:text-purple-400');
+            btn.classList.add('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+        });
+
+        // Add active state to clicked tab
+        this.classList.remove('border-transparent', 'text-gray-500', 'dark:text-gray-400');
+        this.classList.add('border-purple-600', 'text-purple-600', 'dark:text-purple-400');
+    });
+});
+
+// Bookmark toggle
+document.querySelectorAll('button .fa-bookmark').forEach(icon => {
+    icon.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (this.classList.contains('far')) {
+            this.classList.remove('far');
+            this.classList.add('fas', 'text-purple-600', 'dark:text-purple-400');
+        } else {
+            this.classList.remove('fas', 'text-purple-600', 'dark:text-purple-400');
+            this.classList.add('far');
+        }
+    });
+});
+
+// Follow button toggle
+const followBtn = document.querySelector('button.bg-purple-600');
+followBtn.addEventListener('click', function () {
+    if (this.textContent.includes('Follow')) {
+        this.innerHTML = '<i class="fas fa-check"></i> Following';
+        this.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+        this.classList.add('bg-green-600', 'hover:bg-green-700');
+    } else {
+        this.innerHTML = '<i class="fas fa-plus"></i> Follow';
+        this.classList.remove('bg-green-600', 'hover:bg-green-700');
+        this.classList.add('bg-purple-600', 'hover:bg-purple-700');
+    }
+});

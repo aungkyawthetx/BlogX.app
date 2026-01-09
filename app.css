@@ -9,18 +9,6 @@
         border-color 0.3s ease;
 }
 
-.glass-navbar {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.dark .glass-navbar {
-    background: rgba(15, 23, 42, 0.8);
-    border-bottom: 1px solid rgba(30, 41, 59, 0.5);
-}
-
 .notification-badge {
     position: absolute;
     top: -6px;
