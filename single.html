@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modern blog detail · single image layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.7; color: #334155; }
+    .prose h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+    .prose blockquote { border-left-color: #818cf8; background-color: #f8fafc; padding: 1rem 1.5rem; border-radius: 0.5rem; font-style: italic; }
+  </style>
+</head>
+<body class="bg-white text-slate-700">
+
+  <!-- minimal navigation -->
+  <nav class="border-b border-slate-100 bg-white/90 backdrop-blur-sm sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        back to blog
+      </a>
+      <span class="text-sm text-slate-400">single image layout · your blog</span>
+    </div>
+  </nav>
+
+  <!-- main article (single image optimized) -->
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-8 md:py-12">
+    
+    <!-- header -->
+    <header class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-indigo-600 font-medium mb-3">
+        <span>● design</span>
+        <span class="text-slate-300">/</span>
+        <span>6 min read</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+        minimal blog detail <br>with a single image
+      </h1>
+      
+      <!-- author meta -->
+      <div class="flex items-center gap-4 mt-6 pt-2 border-t border-slate-100">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=48&h=48&auto=format&fit=crop" 
+             alt="author" class="w-10 h-10 rounded-full object-cover ring-2 ring-white">
+        <div>
+          <p class="font-medium text-slate-900">Morgan Chen <span class="text-sm font-normal text-slate-400">· april 13, 2025</span></p>
+          <p class="text-xs text-slate-400">product designer · writing about craft</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- FEATURED IMAGE (the one and only) -->
+    <figure class="my-8 md:my-10">
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50">
+        <img class="w-full h-auto object-cover" 
+             src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1400&auto=format&fit=crop" 
+             alt="minimal workspace with natural light">
+      </div>
+      <figcaption class="text-center mt-3 text-sm text-slate-400 flex items-center justify-center gap-2">
+        <span>your featured image</span>
+        <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+        <span>minimal workspace · natural light</span>
+      </figcaption>
+    </figure>
+
+    <!-- article content with visual variety (no extra images needed) -->
+    <div class="prose prose-lg prose-slate max-w-none">
+      <!-- intro -->
+      <p class="lead text-xl text-slate-600 font-light leading-relaxed">This layout is designed specifically for blogs that accept only one image per post. Even with a single visual asset, you can create a rich, engaging reading experience through typography, spacing, and subtle design elements.</p>
+      
+      <!-- first section with decorative element (no image) -->
+      <h2>making one image enough</h2>
+      <p>The key is to let your featured image carry the visual weight. Place it prominently near the top — it sets the mood for everything that follows. After that, we use typography and thoughtful spacing to maintain interest.</p>
+      
+      <!-- pull quote / text highlight (replaces need for second image) -->
+      <div class="my-10 bg-indigo-50/50 rounded-xl p-6 border-l-4 border-indigo-300">
+        <p class="text-lg text-indigo-800 font-medium italic leading-relaxed">“A single, well-chosen image can communicate more than a gallery of mediocre ones. Let it breathe, and build your narrative around its story.”</p>
+        <p class="text-sm text-indigo-400 mt-2">— design principle</p>
+      </div>
+      
+      <h3>text as texture</h3>
+      <p>Without multiple images, we use text formatting to create rhythm. Notice how we're mixing paragraph lengths, adding pull quotes, and using subheadings. This keeps the eye moving down the page. Below, we'll add a simple stats element — it breaks up the text without requiring an image.</p>
+      
+      <!-- simple stats card (visual break without image) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-10 not-prose">
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-100">
+          <p class="text-2xl font-bold text-indigo-600">1</p>
+          <p class="text-xs text-slate-500">featured image</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-100">
+          <p class="text-2xl font-bold text-indigo-600">5+</p>
+          <p class="text-xs text-slate-500">min read</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-100">
+          <p class="text-2xl font-bold text-indigo-600">100%</p>
+          <p class="text-xs text-slate-500">typography</p>
+        </div>
+        <div class="bg-slate-50 rounded-xl p-4 text-center border border-slate-100">
+          <p class="text-2xl font-bold text-indigo-600">∞</p>
+          <p class="text-xs text-slate-500">flexibility</p>
+        </div>
+      </div>
+      
+      <h3>visual hierarchy without clutter</h3>
+      <p>Even with just one image, you can create distinct sections. Use backgrounds, borders, and color blocks to separate ideas. For example, the stats above act as a visual pause — similar to what a second image might do, but using only CSS.</p>
+      
+      <!-- code snippet / text decoration (alternative to image) -->
+      <div class="bg-slate-900 text-slate-100 rounded-xl p-5 my-8 font-mono text-sm overflow-x-auto">
+        <p class="text-indigo-300">// your blog only needs one image</p>
+        <p><span class="text-green-300">.featured-image</span> {</p>
+        <p class="ml-4">width: 100%;</p>
+        <p class="ml-4">border-radius: 1rem;</p>
+        <p class="ml-4">box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);</p>
+        <p>}</p>
+      </div>
+      
+      <p>See how that code block adds visual weight? It's a design element that feels like an image, but it's just text. This approach lets you build a rich layout while respecting your platform's single-image constraint.</p>
+      
+      <h2>working with your one image</h2>
+      <p>Make that single image work harder:</p>
+      <ul class="list-disc pl-6 space-y-2 marker:text-indigo-400">
+        <li><span class="font-medium text-slate-900">Choose a hero-worthy photo</span> — it's the only visual, so it should be impactful and relevant.</li>
+        <li><span class="font-medium text-slate-900">Add a detailed caption</span> — use it to add context or a story that connects to your text.</li>
+        <li><span class="font-medium text-slate-900">Consider orientation</span> — landscape works best for headers, but you could also use portrait and wrap text around it (see below).</li>
+      </ul>
+      
+      <!-- example of text wrap with portrait (using the SAME image? no — we describe it, but don't show) -->
+      <div class="flex flex-wrap gap-6 my-8 items-start bg-slate-50 p-5 rounded-xl">
+        <div class="w-32 h-32 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-400 shrink-0 border-2 border-indigo-200 border-dashed">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div class="flex-1">
+          <p class="text-sm text-slate-500 mb-1">portrait image placeholder</p>
+          <p class="text-slate-700">If your single image is portrait-oriented, you could float it within the text like this. But remember — you only have one, so choose its placement wisely. Most blogs put it at the top, and that's perfectly fine.</p>
+        </div>
+      </div>
+      
+      <h3>color & contrast as imagery</h3>
+      <p>Without a second image, you can use colored sections, gradients, or subtle patterns. The dashed box above is a good example — it suggests an image without actually needing one. This keeps the layout feeling designed and intentional.</p>
+      
+      <!-- gradient separator (visual interest without image) -->
+      <div class="h-1 w-24 bg-gradient-to-r from-indigo-300 to-indigo-100 rounded-full my-10 mx-auto"></div>
+      
+      <p>Remember: your readers came for the writing. A single, powerful image sets the stage, but your words tell the story. This layout proves you don't need multiple images to create a modern, engaging blog detail page.</p>
+      
+      <!-- final note / tip box -->
+      <div class="bg-indigo-50 p-6 rounded-xl my-8 border border-indigo-100">
+        <p class="font-medium text-indigo-900 mb-1">✨ pro tip for single-image blogs</p>
+        <p class="text-indigo-800 text-sm">Use your image editing tool to create collages if you need multiple visuals — combine 2-3 photos into one image before uploading. That way you keep the single upload limit but get multiple visuals in one frame.</p>
+      </div>
+    </div>
+
+    <!-- tags & share (minimal) -->
+    <div class="flex flex-wrap gap-2 my-10 pt-4 border-t border-slate-100">
+      <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1.5 rounded-full">#singleimage</span>
+      <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1.5 rounded-full">#blogdesign</span>
+      <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1.5 rounded-full">#tailwindcss</span>
+      <span class="bg-slate-100 text-slate-600 text-xs px-3 py-1.5 rounded-full">#minimal</span>
+    </div>
+
+    <!-- author bio (consistent style) -->
+    <div class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm my-8">
+      <div class="flex items-center gap-4">
+        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&auto=format&fit=crop" 
+             alt="author" class="w-14 h-14 rounded-full object-cover ring-2 ring-white">
+        <div>
+          <p class="font-semibold text-slate-900">Morgan Chen</p>
+          <p class="text-sm text-slate-500">designer & writer. sharing thoughts on craft, simplicity, and building things that matter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- comments (light version) -->
+    <div class="mt-10">
+      <h3 class="font-semibold text-slate-900 mb-4 flex items-center gap-2">
+        <span class="w-1 h-4 bg-indigo-400 rounded-full"></span>
+        3 comments
+      </h3>
+      <div class="space-y-5">
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-slate-200 shrink-0"></div>
+          <div class="flex-1">
+            <p class="text-sm"><span class="font-medium text-slate-900">Taylor</span> <span class="text-xs text-slate-400">· 2 days ago</span></p>
+            <p class="text-sm text-slate-600">Love how clean this is. Proves you don't need multiple images for a professional look.</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-full bg-slate-200 shrink-0"></div>
+          <div class="flex-1">
+            <p class="text-sm"><span class="font-medium text-slate-900">Jamie</span> <span class="text-xs text-slate-400">· 1 day ago</span></p>
+            <p class="text-sm text-slate-600">That stats card is a great alternative to another image. stealing this idea!</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5">
+        <input type="text" placeholder="join the conversation..." 
+               class="w-full text-sm rounded-full border border-slate-200 px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-200">
+      </div>
+    </div>
+
+    <div class="text-xs text-center text-slate-300 mt-12">single image layout · adapted for your blogging platform</div>
+  </article>
+</body>
+</html>
